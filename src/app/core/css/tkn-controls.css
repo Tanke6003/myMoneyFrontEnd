@@ -1,0 +1,62 @@
+
+/* Agrega estos estilos al archivo de estilos de tu aplicación o componente */
+.tkn-select {
+    appearance: none; /* Elimina la apariencia nativa del menú desplegable en algunos navegadores */
+    background-color: #fff; /* Color de fondo */
+    border: 1px solid #ced4da; /* Borde del menú desplegable */
+    padding: 8px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 100%; /* Ocupa el ancho completo del contenedor padre */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el menú desplegable */
+}
+
+.tkn-select:focus {
+    outline: none; /* Elimina el contorno al enfocar el menú desplegable */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave al enfocar el menú desplegable */
+}
+
+/* Estilos para las opciones dentro del menú desplegable */
+.tkn-select option {
+    background-color: #fff; /* Color de fondo */
+    color: #495057; /* Color del texto */
+}
+
+.tkn-select option:hover {
+    background-color: #e9ecef; /* Color de fondo al pasar el ratón sobre la opción */
+}
+/* Agrega estos estilos al archivo de estilos de tu aplicación o componente */
+.tkn-input {
+    background-color: #fff; /* Color de fondo del input */
+    border: 1px solid #ced4da; /* Borde del input */
+    padding: 8px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 100%; /* Ocupa el ancho completo del contenedor padre */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transición suave */
+}
+
+.tkn-input:focus {
+    border-color: #007bff; /* Color del borde al enfocar el input */
+    outline: 0; /* Elimina el contorno al enfocar el input */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave al enfocar el input */
+}
+
+/* Estilo para inputs de tipo "date" */
+.tkn-date {
+    appearance: none; /* Elimina la apariencia nativa en algunos navegadores */
+}
+
+.tkn-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tkn-button:disabled {
+    background-color: #ccc; /* Color de fondo del botón desactivado */
+    cursor: not-allowed;
+}
+
+

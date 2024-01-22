@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Adding Styles Personalized By Me */
+@import url('app/core/css/tkn-controls.css');
+
+.page{
+    height: 100vh!important;
+    width: 100vw!important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

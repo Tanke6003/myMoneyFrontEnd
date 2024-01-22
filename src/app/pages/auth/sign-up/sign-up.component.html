@@ -1,1 +1,51 @@
-<p>sign-up works!</p>
+<body class="page sign-up-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+                <!-- Agrega el título "myMoney" aquí -->
+                <h1 class="text-center mb-4">My Money</h1>
+
+                <!-- Formulario -->
+                <form class="bg-white p-4 rounded shadow">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control tkn-input" formControlName="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthDate">Fecha de Nacimiento</label>
+                        <input type="date" id="birthDate" class="form-control tkn-input tkn-date" formControlName="birthDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationality">Nacionalidad</label>
+                        <select id="nationality" class="form-control tkn-input" formControlName="nationality">
+                            <option selected disabled>Selecciona una opción</option>
+                            <option value="usa">Estados Unidos</option>
+                            <option value="canada">Canadá</option>
+                            <option value="mexico">México</option>
+                            <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" class="form-control tkn-input" formControlName="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirmar Contraseña</label>
+                        <input type="password" id="confirmPassword" class="form-control tkn-input" formControlName="confirmPassword">
+                    </div>
+                    <div class=" form-group">
+                        <div class="d-flex">
+                            <a class="btn btn-link tkn-link mt-5" routerLink="/sign-in">¿Ya tienes una cuenta?</a>
+                            <button type="submit" class="btn btn-primary tkn-button mt-5 ms-auto col-xl-3" [disabled]="">Registrarse</button>
+                        </div>
+                       
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
