@@ -1,0 +1,55 @@
+<body class="page sign-up-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-12">
+                <h1 class="text-center mb-4">My Money</h1>
+                <form class="bg-card-form p-4 rounded shadow" [formGroup]="signUpForm"(ngSubmit)="signUp()">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control tkn-input" formControlName="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birthDate">Birth Date</label>
+                        <input type="date" id="birthDate" class="form-control tkn-input tkn-date" formControlName="birthDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nationality">Nationality</label>
+                        <select id="nationality" class="form-control tkn-input" formControlName="nationality" >
+                            <option value="usa">United States</option>
+                            <option value="canada">Canada</option>
+                            <option value="mexico">Mexico</option>
+                        </select>
+                        <div class="tkn-input-group-append">
+                              <i class="fas fa-caret-down"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control tkn-input" formControlName="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" class="form-control tkn-input" formControlName="confirmPassword" (input)="validatePassword()" >
+                    </div>
+                    <div class=" form-group">
+                        <div class="d-flex">
+                            <a class="btn btn-link tkn-link mt-3" routerLink="/sign-in">Have you an account?</a>
+                            <button type="submit" class="btn btn-primary tkn-button mt-3 ms-auto col-xl-3" [disabled]="signUpForm.invalid">Sign Up</button>
+                        </div>
+                       
+                    </div>
+                            <footer class="d-flex mt-3">
+                                <p class="me-auto mb-0">Version: 0.0.1</p>
+                                <p class="ms-auto mb-0">Axolotech &copy; 2024</p>
+                            </footer>
+                
+                </form>
+            </div>
+        </div>
+      
+    </div>
+
+</body>

@@ -1,0 +1,54 @@
+
+
+/* Agrega estos estilos al archivo de estilos de tu aplicación o componente */
+.tkn-input {
+    background-color: #fff; /* Color de fondo del input */
+    border: 1px solid #ced4da; /* Borde del input */
+    padding: 8px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    width: 100%; /* Ocupa el ancho completo del contenedor padre */
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transición suave */
+}
+
+.tkn-input:focus {
+    border-color: #007bff; /* Color del borde al enfocar el input */
+    outline: 0; /* Elimina el contorno al enfocar el input */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave al enfocar el input */
+
+}
+
+/* Estilo para inputs de tipo "date" */
+.tkn-date {
+    appearance: none; /* Elimina la apariencia nativa en algunos navegadores */
+}
+
+.tkn-button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tkn-button:disabled {
+    background-color: #ccc; /* Color de fondo del botón desactivado */
+    cursor: not-allowed;
+}
+.tkn-input-group-append{
+    display: flex;
+}
+.fas.fa-caret-down
+{
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-top: -1.8rem;
+}
+.ng-invalid.ng-touched{
+    border-color: #dc3545; /* Color del borde al enfocar el input */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+.ng-invalid:focus{
+    border-color: #dc3545; /* Color del borde al enfocar el input */
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
