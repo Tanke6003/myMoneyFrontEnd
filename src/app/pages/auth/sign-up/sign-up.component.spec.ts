@@ -20,4 +20,8 @@ describe('SignUpComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('signUpForm onSubmit should return false', () => {
+    expect(component.signUp()).toBeFalsy();
+  });
 });
