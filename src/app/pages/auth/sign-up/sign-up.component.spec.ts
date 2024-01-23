@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClientModule } from '@angular/common/http'; // Asegúrate de importar HttpClientModule
 
 import { SignUpComponent } from './sign-up.component';
 
@@ -8,7 +9,7 @@ describe('SignUpComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [SignUpComponent]
+      imports: [HttpClientModule,SignUpComponent]
     })
     .compileComponents();
     

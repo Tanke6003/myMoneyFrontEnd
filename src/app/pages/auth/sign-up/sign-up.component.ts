@@ -20,10 +20,7 @@ export class SignUpComponent {
     password: new FormControl('', [Validators.required]),
     confirmPassword: new FormControl('', [Validators.required]),
   });
-  jwtutilidad:JwtPlugin = new JwtPlugin();
   constructor(private router: Router,private auth:AuthService) {
-    let decode = this.jwtutilidad.decodeToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c');
-    console.log(decode);
   }
   signUp() {
     this.auth.signUp(this.signUpForm.value).subscribe((data:any) => {
