@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule, FormGroup, Validators}  from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthService } from '../../../core/services/auth.service';
 
 @Component({
   selector: 'app-sign-up',
   standalone: true,
   imports: [ReactiveFormsModule,FormsModule],
+  providers: [AuthService],
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })
@@ -18,11 +19,14 @@ export class SignUpComponent {
     password: new FormControl('', [Validators.required]),
     confirmPassword: new FormControl('', [Validators.required]),
   });
-  constructor(private router: Router,) {
+  constructor(private router: Router,private auth:AuthService) {
 
   }
   signUp() {
-    console.log(this.signUpForm.value);
+    this.auth.signUp(this.signUpForm.value).subscribe((data:any) => {
+      console.log("Inside signUp method");
+      console.log(data);
+    });
   }
   
   validatePassword() {
@@ -31,6 +35,7 @@ export class SignUpComponent {
       this.signUpForm.controls['confirmPassword'].setErrors({ 'incorrect': true });
     }
   }
+
   goToSignIn() {
     this.router.navigate(['/sign-in']);
   }
